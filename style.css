@@ -1,0 +1,430 @@
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+
+Font: Reddit Sans, sans serif
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font Weights
+- Default: 400
+- Medium: 500 
+- Semi-Bold: 600
+- Bold: 700
+
+- Line Heights: 
+- Default: 1
+- Small: 1.05
+- Medium: 1.2
+- Paragraph default: 1.6
+
+- Letter Spacing:
+0.5 px
+0.75 px
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+--- 02 COLORS
+
+- Primary: 
+#F15B6C
+
+- Tints:  
+#
+- Shades: 
+#
+#
+- Accents: 
+#FFEE58
+# 
+
+- Grays:
+# 
+#
+
+
+--- 05 SHADOWS
+0.3rem 0.3rem 1rem #;
+
+--- 06 BORDER-RADIUS
+- Default: 8px
+- 
+
+
+--- 07 WHITESPACE
+- Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* .custom-search {
+	width: 200px;
+	justify-content: left;
+} */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* font-size: 10px; */
+	font-size: 62.5%;
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Paytone One", sans-serif;
+}
+
+body {
+	font-family: "Inter Tight", sans-serif;
+	position: relative;
+	min-height: 100vh;
+}
+
+body #nav-logo {
+	margin-left: 1.2rem;
+	margin-right: 2.4rem;
+}
+
+.nav-link {
+	font-size: 1.6rem;
+	margin-right: 1.6rem;
+}
+
+#search-button {
+	font-size: 1.4rem;
+	padding: 0.6rem 1.6rem;
+}
+
+#top-logo {
+	margin-top: 1.2rem !important;
+	margin-bottom: 1.2rem !important;
+	padding-top: 0rem !important;
+}
+#hero-h1 {
+	font-size: 4.2rem;
+	margin-bottom: 1rem;
+}
+
+#hero-h2 {
+	font-size: 3.2rem;
+	margin-bottom: 1.6rem;
+}
+
+#hero-p {
+	font-size: 1.8rem;
+	margin-bottom: 2.4rem;
+}
+
+.nav-search-input {
+	font: 1.4rem;
+}
+
+#search-page-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+}
+
+body:before {
+	content: "";
+	height: 100%;
+	float: left;
+	width: 0;
+	margin-top: -32767px;
+}
+
+#pokemon-name {
+	font-size: 4.8rem !important;
+	margin-bottom: 1.6rem;
+}
+
+#pokemon-snippet {
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.8;
+}
+#versions {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.8;
+}
+
+.bg-secondary {
+	background-color: #7da6de !important;
+}
+
+#evolution-heading {
+	align-items: left;
+}
+
+.evolution-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.evolution-card h2 {
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1.8;
+	margin-bottom: 1.2rem;
+	padding-top: 0rem !important;
+}
+
+.evolution-card img {
+	margin: 0 1.6rem;
+	height: 150px;
+	width: 150px;
+	background-color: #ffffffa5;
+	border-radius: 100%;
+	padding: 1.6rem;
+	margin-left: 3rem;
+}
+
+#search {
+	padding: 0.6rem;
+	font-size: 1.4rem;
+	margin: 0.8rem 1.6rem;
+	border-radius: 5px;
+	border: none;
+}
+
+#pokemon-details {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+}
+
+#pokemon-details div {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.8;
+	margin-bottom: 1rem;
+	padding: 0.4rem !important;
+	/* background-color: #7da6de; */
+	border-radius: 5px;
+	width: 75%;
+}
+
+.pokemon-results {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#stats {
+	display: flex;
+	/* flex-direction: column; */
+	align-items: left;
+}
+
+.table {
+	width: 80%;
+}
+
+th {
+	font-size: 1.4rem;
+	font-weight: 700;
+	line-height: 1.8;
+}
+
+td {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.progress {
+	height: 2.4rem;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.progress-bar {
+	height: 100%;
+	background-color: #4caf50;
+	width: 0%;
+	transition: width 0.5s ease-in-out;
+}
+
+.vitals-content {
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.6;
+	/* margin-bottom: 1rem; */
+}
+
+#pokemon-name h1 {
+	font-size: 4.8rem;
+	margin-bottom: 1.6rem;
+}
+.vitals h3 {
+	font-size: 2rem;
+	font-weight: 800;
+	line-height: 1.8;
+	margin-bottom: 1rem;
+}
+
+/* Add or update these styles for different Pokémon types */
+.fire-type {
+	background-color: #f15b6c;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.water-type {
+	background-color: #4a90e2;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.grass-type {
+	background-color: #7ac74c;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.electric-type {
+	background-color: #f7d02c;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.ice-type {
+	background-color: #51c4e7;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.normal-type {
+	background-color: #a4acaf;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.fighting-type {
+	background-color: #d56723;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.poison-type {
+	background-color: #b97fc9;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.ground-type {
+	background-color: #e2bf65;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.flying-type {
+	background-color: #a98ff3;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.psychic-type {
+	background-color: #f366b9;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.bug-type {
+	background-color: #a6b91a;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.rock-type {
+	background-color: #b6a136;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.ghost-type {
+	background-color: #735797;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.dragon-type {
+	background-color: #6f35fc;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.dark-type {
+	background-color: #705746;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.steel-type {
+	background-color: #b7b7ce;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+.fairy-type {
+	background-color: #d685ad;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+
+#search-button {
+	background-color: #f15b6c;
+	color: #fff;
+	padding: 0.6rem 1.6rem;
+	border-radius: 5px;
+	border: none;
+}

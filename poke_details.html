@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokemon Details</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- NAV BAR -->
+		<nav class="navbar navbar-expand-xl navbar-light bg-light p-0">
+			<div class="container-fluid py-2" style="background-color: #f15b6c">
+				<img
+					src="./assets/pokeapi_256.3fa72200.png"
+					alt="pokeapi logo"
+					height="40"
+					width="90"
+					id="nav-logo"
+				/>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarBasic"
+					aria-controls="navbarBasic"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarBasic">
+					<ul class="navbar-nav me-auto mb-2 mb-xl-0">
+						<li class="nav-item">
+							<a
+								class="nav-link active text-light"
+								aria-current="page"
+								href="./index.html"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="./search.html">Search</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input
+							class="form-control me-2 w-100"
+							id="search-input"
+							type="search"
+							placeholder="Search for a Pokemon"
+							aria-label="Search"
+							style="font-size: 1.4rem"
+						/>
+						<button
+							class="btn btn-outline-success border-light text-light"
+							type="submit"
+							id="search-button"
+						>
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!-- Character Jumbotron -->
+		<div class="container px-5 px-lg-5 pokemon-results">
+			<!-- <div class="row gx-4 gx-lg-5 align-items-center my-5"> -->
+			<div class="col-lg-7" id="pokemon-details">
+				<div id="pokemon-name">
+					<h1>Name</h1>
+				</div>
+				<div class="col-lg-5" id="sprite-container">
+					<!-- Placeholder for Pokémon image -->
+					<img
+						id="pokemon-image"
+						src=""
+						alt="Pokemon"
+						width="400"
+						height="400"
+					/>
+				</div>
+				<div class="vitals">
+					<h3>
+						ID:
+						<span id="pokemon-id" class="vitals-content"></span>
+					</h3>
+				</div>
+				<div class="vitals">
+					<h3>Weight: <span id="weight" class="vitals-content"></span></h3>
+				</div>
+				<div class="vitals">
+					<h3>Height: <span id="height" class="vitals-content"></span></h3>
+				</div>
+
+				<div id="types"><p id="versions">Types:</p></div>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th scope="col" colspan="2">Stats</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" style="width: 20%">HP</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+									id="hp"
+								>
+									<div
+										class="progress-bar bg-success"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Attack</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+								>
+									<div
+										class="progress-bar bg-danger"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Defense</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+								>
+									<div
+										class="progress-bar bg-info"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Sp. Attack</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+								>
+									<div
+										class="progress-bar bg-primary"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Sp. Defense</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+								>
+									<div
+										class="progress-bar bg-warning"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Speed</th>
+							<td>
+								<div
+									class="progress"
+									role="progressbar"
+									aria-label="Basic example"
+									aria-valuenow="25"
+									aria-valuemin="0"
+									aria-valuemax="100"
+									style="
+										padding: 0 !important;
+										margin: 0 !important;
+										width: 100%;
+									"
+								>
+									<div
+										class="progress-bar bg-secondary"
+										style="width: 25%; height: 100%"
+									></div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- </div> -->
+
+		<!-- Footer -->
+		<div class="container">
+			<footer
+				class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+			>
+				<p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+				<a
+					href="/"
+					class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="50"
+						height="50"
+						viewBox="0 0 100 100"
+					>
+						<circle cx="50" cy="50" r="35" fill="#e3e2e3"></circle>
+						<path
+							fill="#f15b6c"
+							d="M50,15c-19.33,0-35,15.67-35,35h70C85,30.67,69.33,15,50,15z"
+						></path>
+						<path
+							fill="#1f212b"
+							d="M50,86c-19.851,0-36-16.149-36-36s16.149-36,36-36s36,16.149,36,36S69.851,86,50,86z M50,16c-18.748,0-34,15.252-34,34s15.252,34,34,34s34-15.252,34-34S68.748,16,50,16z"
+						></path>
+						<circle cx="50" cy="50" r="10" fill="#fff"></circle>
+						<path
+							fill="#1f212b"
+							d="M50,61c-6.065,0-11-4.935-11-11s4.935-11,11-11s11,4.935,11,11S56.065,61,50,61z M50,41c-4.962,0-9,4.037-9,9s4.038,9,9,9s9-4.037,9-9S54.962,41,50,41z"
+						></path>
+						<circle cx="50" cy="50" r="4.5" fill="#444445"></circle>
+						<path
+							fill="#1f212b"
+							d="M50,55c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S52.757,55,50,55z M50,46c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S52.206,46,50,46z"
+						></path>
+					</svg>
+				</a>
+				<ul class="nav col-md-4 justify-content-end">
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Search</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary"
+							>Build a Team</a
+						>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">About</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+		<!-- Bootstrap core JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Core theme JS -->
+		<script src="./script.js"></script>
+	</body>
+</html>

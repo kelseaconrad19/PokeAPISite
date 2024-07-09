@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Search</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- ! ///////////////////////////////////// -->
+		<!-- ! NAV BAR -->
+		<!-- ! ///////////////////////////////////// -->
+		<nav class="navbar navbar-expand-xl navbar-light bg-light p-0">
+			<div class="container-fluid py-2" style="background-color: #f15b6c">
+				<img
+					src="./assets/pokeapi_256.3fa72200.png"
+					alt="pokeapi logo"
+					height="40"
+					width="90"
+					id="nav-logo"
+				/>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarBasic"
+					aria-controls="navbarBasic"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarBasic">
+					<ul class="navbar-nav me-auto mb-2 mb-xl-0">
+						<li class="nav-item">
+							<a
+								class="nav-link active text-light"
+								aria-current="page"
+								href="./index.html"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-light" href="#">Search</a>
+						</li>
+					</ul>
+					<form class="d-flex search-button">
+						<input
+							class="form-control me-2 w-100 search"
+							id="search-input"
+							type="search"
+							placeholder="Search for a Pokemon"
+							aria-label="Search"
+							style="font-size: 1.4rem"
+						/>
+						<button
+							class="btn btn-outline-success border-light text-light"
+							type="submit"
+							id="search-button"
+						>
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<!-- ? ///////////////////////////////////// -->
+		<!-- ? HERO -->
+		<!-- ? ///////////////////////////////////// -->
+		<div class="px-4 py-5 my-5 text-center" id="top-logo">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				x="0px"
+				y="0px"
+				width="120"
+				height="120"
+				viewBox="0 0 100 100"
+			>
+				<circle cx="50" cy="50" r="35" fill="#e3e2e3"></circle>
+				<path
+					fill="#f15b6c"
+					d="M50,15c-19.33,0-35,15.67-35,35h70C85,30.67,69.33,15,50,15z"
+				></path>
+				<path
+					fill="#1f212b"
+					d="M50,86c-19.851,0-36-16.149-36-36s16.149-36,36-36s36,16.149,36,36S69.851,86,50,86z M50,16	c-18.748,0-34,15.252-34,34s15.252,34,34,34s34-15.252,34-34S68.748,16,50,16z"
+				></path>
+				<circle cx="50" cy="50" r="10" fill="#fff"></circle>
+				<path
+					fill="#1f212b"
+					d="M50,61c-6.065,0-11-4.935-11-11s4.935-11,11-11s11,4.935,11,11S56.065,61,50,61z M50,41	c-4.962,0-9,4.037-9,9s4.038,9,9,9s9-4.037,9-9S54.962,41,50,41z"
+				></path>
+				<circle cx="50" cy="50" r="4.5" fill="#444445"></circle>
+				<path
+					fill="#1f212b"
+					d="M50,55c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S52.757,55,50,55z M50,46c-2.206,0-4,1.794-4,4	s1.794,4,4,4s4-1.794,4-4S52.206,46,50,46z"
+				></path>
+				<rect width="25" height="2" x="15" y="49" fill="#1f212b"></rect>
+				<rect width="25" height="2" x="60" y="49" fill="#1f212b"></rect>
+				<path
+					fill="#1f212b"
+					d="M50,81c-10.085,0-19.574-4.939-25.382-13.213c-0.159-0.226-0.104-0.538,0.122-0.696	c0.226-0.159,0.538-0.104,0.696,0.122C31.058,75.22,40.24,80,50,80c6.198,0,12.15-1.88,17.212-5.438	c0.226-0.159,0.538-0.104,0.697,0.122c0.159,0.226,0.104,0.537-0.122,0.696C62.556,79.057,56.405,81,50,81z"
+				></path>
+				<path
+					fill="#1f212b"
+					d="M74.226,69c-0.106,0-0.212-0.033-0.303-0.103c-0.219-0.168-0.261-0.481-0.093-0.701l0.087-0.114	c0.22-0.286,0.439-0.573,0.647-0.869c0.159-0.226,0.47-0.281,0.696-0.122c0.226,0.158,0.281,0.471,0.122,0.696	c-0.216,0.308-0.444,0.605-0.672,0.903l-0.087,0.113C74.525,68.933,74.376,69,74.226,69z"
+				></path>
+				<path
+					fill="#1f212b"
+					d="M70.565,73c-0.135,0-0.27-0.055-0.369-0.162c-0.187-0.204-0.173-0.521,0.031-0.707	c0.705-0.646,1.367-1.307,1.966-1.967c0.187-0.203,0.502-0.219,0.707-0.034c0.204,0.186,0.219,0.502,0.034,0.706	c-0.62,0.683-1.304,1.367-2.032,2.033C70.807,72.957,70.686,73,70.565,73z"
+				></path>
+			</svg>
+			<h1 class="display-5 fw-bold text-body-emphasis" id="hero-h1">
+				Pokemon Search Engine
+			</h1>
+		</div>
+		<!-- ! ///////////////////////////////////// -->
+		<!-- ! SEARCH -->
+		<!-- ! ///////////////////////////////////// -->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-8">
+					<h2 class="text-left mb-4">Search for a Pokemon</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-8">
+					<form class="d-flex search-button">
+						<input
+							class="form-control me-2 w-100 search border-dark"
+							id="nav-search-input"
+							type="search"
+							placeholder="Search for a Pokemon"
+							aria-label="Search"
+							style="font-size: 1.4rem"
+						/>
+						<button
+							class="btn btn-outline-dark border-dark text-dark"
+							type="submit"
+							id="nav-search-button"
+						>
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- * ///////////////////////////////////// -->
+		<!-- * FOOTER -->
+		<!-- * ///////////////////////////////////// -->
+		<div class="container" id="search-page-footer">
+			<footer
+				class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+			>
+				<p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+				<a
+					href="/"
+					class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						x="0px"
+						y="0px"
+						width="50"
+						height="50"
+						viewBox="0 0 100 100"
+					>
+						<circle cx="50" cy="50" r="35" fill="#e3e2e3"></circle>
+						<path
+							fill="#f15b6c"
+							d="M50,15c-19.33,0-35,15.67-35,35h70C85,30.67,69.33,15,50,15z"
+						></path>
+						<path
+							fill="#1f212b"
+							d="M50,86c-19.851,0-36-16.149-36-36s16.149-36,36-36s36,16.149,36,36S69.851,86,50,86z M50,16	c-18.748,0-34,15.252-34,34s15.252,34,34,34s34-15.252,34-34S68.748,16,50,16z"
+						></path>
+						<circle cx="50" cy="50" r="10" fill="#fff"></circle>
+						<path
+							fill="#1f212b"
+							d="M50,61c-6.065,0-11-4.935-11-11s4.935-11,11-11s11,4.935,11,11S56.065,61,50,61z M50,41	c-4.962,0-9,4.037-9,9s4.038,9,9,9s9-4.037,9-9S54.962,41,50,41z"
+						></path>
+						<circle cx="50" cy="50" r="4.5" fill="#444445"></circle>
+						<path
+							fill="#1f212b"
+							d="M50,55c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S52.757,55,50,55z M50,46c-2.206,0-4,1.794-4,4	s1.794,4,4,4s4-1.794,4-4S52.206,46,50,46z"
+						></path>
+						<rect width="25" height="2" x="15" y="49" fill="#1f212b"></rect>
+						<rect width="25" height="2" x="60" y="49" fill="#1f212b"></rect>
+						<path
+							fill="#1f212b"
+							d="M50,81c-10.085,0-19.574-4.939-25.382-13.213c-0.159-0.226-0.104-0.538,0.122-0.696	c0.226-0.159,0.538-0.104,0.696,0.122C31.058,75.22,40.24,80,50,80c6.198,0,12.15-1.88,17.212-5.438	c0.226-0.159,0.538-0.104,0.697,0.122c0.159,0.226,0.104,0.537-0.122,0.696C62.556,79.057,56.405,81,50,81z"
+						></path>
+						<path
+							fill="#1f212b"
+							d="M74.226,69c-0.106,0-0.212-0.033-0.303-0.103c-0.219-0.168-0.261-0.481-0.093-0.701l0.087-0.114	c0.22-0.286,0.439-0.573,0.647-0.869c0.159-0.226,0.47-0.281,0.696-0.122c0.226,0.158,0.281,0.471,0.122,0.696	c-0.216,0.308-0.444,0.605-0.672,0.903l-0.087,0.113C74.525,68.933,74.376,69,74.226,69z"
+						></path>
+						<path
+							fill="#1f212b"
+							d="M70.565,73c-0.135,0-0.27-0.055-0.369-0.162c-0.187-0.204-0.173-0.521,0.031-0.707	c0.705-0.646,1.367-1.307,1.966-1.967c0.187-0.203,0.502-0.219,0.707-0.034c0.204,0.186,0.219,0.502,0.034,0.706	c-0.62,0.683-1.304,1.367-2.032,2.033C70.807,72.957,70.686,73,70.565,73z"
+						></path>
+					</svg>
+				</a>
+
+				<ul class="nav col-md-4 justify-content-end">
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Search</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary"
+							>Build a Team</a
+						>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link px-2 text-body-secondary">About</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const searchForm = document.querySelectorAll(".search-button");
+
+				searchForm.forEach((form) => {
+					form.addEventListener("submit", (event) => {
+						event.preventDefault();
+						const searchInput = form
+							.querySelector(".search")
+							.value.toLowerCase();
+						window.location.href = `poke_details.html?pokemon=${searchInput}`;
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
